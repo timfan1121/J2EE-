@@ -2,12 +2,9 @@ J2EE學習筆記
 =========
 
 
+* maven設定local denpendency的路徑格式
 
-pom.xml設定
-----
-
-
-pom.xml設定
+maven設定local denpendency的路徑格式
 ----
 ```xml
 		<!-- orcale maven local lib設定${basedir}代表projectt的dir -->
