@@ -1,9 +1,49 @@
 J2EE學習筆記
 =========
 
-
+* 用java內建程式產生wsdl webwervice client方法
 * maven設定local denpendency的路徑格式
 * springMVC + hibernate的pom可運行版本
+
+
+
+用java內建程式產生wsdl webwervice client方法
+----
+在cmd目錄底下輸入
+````bat
+wsimport -d . -s . http://192.168.20.102:8081/wms/webservice/ShipOutWebService?wsdl
+````
+-d後面參數代表編譯完成的class檔案放置位址
+-s後面參數拜表解析wsdl完成的原始碼擺放位址
+
+使用client方法
+````java
+//找到編譯完成的xxxx_Service.java
+//mmm代表wsdl method name
+xxxx_Service.getXXXXPort().mmm();
+````
+動態修改ip(節錄)
+````java
+// Get the service and the port
+SampleService service = new SampleService();
+Sample port = service.getESamplePort();
+
+// Use the BindingProvider's context to set the endpoint
+BindingProvider bp = (BindingProvider)port;
+bp.getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, "http://www.aviramsegal.com/ws/sample");
+
+/* Optional  credentials */
+bp.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, "user");
+bp.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, "password");
+````
+
+參考資料
+
+[webservice client]
+
+[webservice dynamic ip]
+
+
 
 maven設定local denpendency的路徑格式
 ----
@@ -118,3 +158,5 @@ springMVC + hibernate的pom可運行版本
 		</dependency>
 ```
 
+[webservice client]:http://www.oseye.net/user/kevin/blog/90
+[webservice dynamic ip]:http://stackoverflow.com/questions/5158537/jaxws-how-to-change-the-endpoint-address
