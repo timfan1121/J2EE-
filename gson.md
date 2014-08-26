@@ -1,10 +1,8 @@
 Gson
 =========
 
-Dillinger is a cloud-enabled HTML5 Markdown editor.
-
-  - millseconds解析遇到的問題
-
+millseconds解析遇到的問題
+=========
 
 08-26 10:28:10.233: W/System.err(10094): com.google.gson.JsonSyntaxException: 1409018841000
 
