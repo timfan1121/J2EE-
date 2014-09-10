@@ -3,7 +3,7 @@ spring
 
 停止quartz問題
 ---
-今天去到javafx關閉視窗但schedule還是一直在背景執行，解決的方式要透過spring的SchedulerFactoryBean關掉schedule
+今天去到javafx關閉視窗但schedule還是一直在背景執行，解決的方式要透過spring的SchedulerFactoryBean關掉schedule。
 
 ##### spring xml 配置
 ```xml
