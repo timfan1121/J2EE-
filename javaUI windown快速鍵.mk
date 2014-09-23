@@ -1,6 +1,6 @@
 [來源:How to Use the System Tray](http://docs.oracle.com/javase/tutorial/uiswing/misc/systemtray.html)
 
-```
+
     public static void main(String[] args) {
         /* Use an appropriate Look and Feel */
         try {
@@ -157,4 +157,4 @@
             return (new ImageIcon(imageURL, description)).getImage();
         }
     }
-```
+
