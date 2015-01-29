@@ -1,6 +1,8 @@
 J2EE學習筆記
 =========
 
+
+![test](/logo.png)
 * 用java內建程式產生wsdl webwervice client方法
 * maven設定local denpendency的路徑格式
 * springMVC + hibernate的pom可運行版本
